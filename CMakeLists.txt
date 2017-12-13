@@ -10,6 +10,12 @@ add_executable(helloworld_cli main.cpp)
 
 add_library(helloworld lib.cpp)
 
+include(CPack)
+
+enable_testing()
+
+add_test(test_version test_version)
+
 set_target_properties(helloworld_cli helloworld test_version PROPERTIES
     CXX_STANDART 14
     CXX_STANDART_REQUIRED ON
@@ -39,9 +45,3 @@ set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
 set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 
 set(CPACK_PACKAGE_CONTACT cowwwboy@ya.ru)
-
-include(CPack)
-
-enable_testing()
-
-add_test(test_version test_version)
