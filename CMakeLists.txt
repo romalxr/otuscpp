@@ -8,6 +8,8 @@ configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
 
+add_executable(test_version test.cpp)
+
 add_library(helloworld lib.cpp)
 
 include(CPack)
