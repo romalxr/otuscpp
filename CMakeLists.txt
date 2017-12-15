@@ -8,8 +8,6 @@ add_executable(helloworld_cli main.cpp)
 
 add_library(helloworld lib.cpp)
 
-include(CPack)
-
 set_target_properties(helloworld_cli helloworld PROPERTIES
     CXX_STANDART 14
     CXX_STANDART_REQUIRED ON
@@ -29,3 +27,5 @@ set(CPACK_PACKAGE_VERSION_MINOR "0")
 set(CPACK_PACKAGE_VERSION_PATCH "$ENV{TRAVIS_BUILD_NUMBER}")
 
 set(CPACK_PACKAGE_CONTACT cowwwboy@ya.ru)
+
+include(CPack)
