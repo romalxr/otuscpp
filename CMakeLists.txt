@@ -20,6 +20,7 @@ set_target_properties(helloworld_cli helloworld PROPERTIES
 
 set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+    COMPILE_OPTIONS -D_GLIBCXX_USE_CXX11_ABI=0
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
@@ -28,7 +29,7 @@ target_link_libraries(helloworld_cli
 )
 
 target_link_libraries(test_version
-    ${Boost_INCLUDE_DIR}
+    ${Boost_LIBRARIES}
     helloworld
 )
 
