@@ -1,4 +1,3 @@
-
 *.d
 
 *.slo
@@ -24,6 +23,10 @@
 *.exe
 *.out
 *.app
-*.deb
 
 *.cmake
+
+helloworld_cli
+LICENSE
+main
+version.h
